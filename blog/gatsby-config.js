@@ -1,9 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `X-Blog`,
+    description: `The Truth is Out There`,
+    author: `Fox Mulder`,
+    contact: {
+      name: `Fox Mulder`,
+      company: `F.B.I.`,
+      address: `123 Fake Street`
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
