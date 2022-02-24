@@ -15,10 +15,16 @@ const BlogPost = ({ data }) => {
 export default BlogPost;
 
 export const pageQuery = graphql`
-  query blogPostQuery($slug: String!) {
-    contentfulBlogPost(slug: {eq: $slug}) {
-      title
-      slug
+ query blogPostQuery($slug: String!) {
+  contentfulBlogPost(slug: {eq: $slug}) {
+    title
+    slug
+    body {
+      childMarkdownRemark {
+        html
+      }
     }
   }
+}
+
 `
