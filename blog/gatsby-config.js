@@ -4,8 +4,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `X-Blog`,
-    description: `The Truth is Out There`,
+    title: `Trust No One`,
+    description: `X-blog`,
     author: `Fox Mulder`,
     contact: {
       name: `Fox Mulder`,
