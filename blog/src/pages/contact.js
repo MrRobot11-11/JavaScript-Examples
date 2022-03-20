@@ -20,7 +20,7 @@ const Contact = ({ data }) => { //Destructure data to get name, company, address
                 src="../images/gatsby-astronaut.png"
                 width={300}
                 quality={95}
-                formats={["auto", "webp", "avif"]}
+                formats={["auto", "webp", "avif", "png"]}
                 alt="A Gatsby astronaut"
                 style={{ marginBottom: `1.45rem` }}
                 />
