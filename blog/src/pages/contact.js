@@ -5,11 +5,11 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const Contact = ({ data }) => {
-    const { name, company, address } = data.site.siteMetadata.contact;
-    return (
+const Contact = ({ data }) => { //Destructure data to get name, company, address
+    const { name, company, address } = data.site.siteMetadata.contact; //structure of the query-> where the query comes from
+    return (  //Grouping html that we're going to return
         <Layout>
-            <Seo title="Home" />
+            <Seo title="Contact" />
             <h1>Contact Us</h1>
             <p>Please send all inquiries to: </p>
             <div>{company}</div>
@@ -20,7 +20,7 @@ const Contact = ({ data }) => {
                 src="../images/gatsby-astronaut.png"
                 width={300}
                 quality={95}
-                formats={["auto", "webp", "avif"]}
+                formats={["auto", "webp", "avif", "png"]}
                 alt="A Gatsby astronaut"
                 style={{ marginBottom: `1.45rem` }}
                 />
@@ -30,9 +30,10 @@ const Contact = ({ data }) => {
         )
 }
 
-export default Contact
-
-export const query = graphql`
+export default Contact  //Have to export so build engine can access it
+                                
+/*Running query through function graphgl() */
+export const query = graphql` 
     query {
         site {
             siteMetadata {
