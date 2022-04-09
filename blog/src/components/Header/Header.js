@@ -5,6 +5,8 @@ import { Link } from "gatsby"
 import styled from 'styled-components'
 import { H1 } from '../Heading'
 import { Section } from '../Section'
+import { Search } from 'styled-icons/feather'
+import { IconButton } from '../Button'
 
 const Outer = styled.header`
   background: ${props => props.theme.header.backgroundColor};
@@ -28,7 +30,10 @@ const StyledLink = styled(Link)`
     color: purple;
   }
 `
-
+/* Replace the “Search” text with the IconButton 
+*/
+/* Set the IconButton icon prop to the Search icon you imported above.
+ */
 const Header = ({ siteTitle }) => (
   <Outer>
     <Inner>
@@ -41,9 +46,9 @@ const Header = ({ siteTitle }) => (
       </H1>
       </Section>
       <Section width={1/12}>
-        Search
+        <IconButton icon={<Search />} />
         </Section>
-        </Section>
+      </Section>
     </Inner>
   </Outer>
 )
