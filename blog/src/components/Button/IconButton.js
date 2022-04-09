@@ -8,7 +8,8 @@ import { BaseButton } from './BaseButton'
    just leave it empty. 
  */
 const StyledButton = styled(BaseButton)`
-//Inject them styles here later
+    ${ ( { theme, variant}) => theme.variants.iconButton[variant || 'primary']}
+
 `
 /*  Create a styled component named IconButton that wraps StyledButton. 
  */
@@ -44,5 +45,6 @@ IconButton.defaultProps = {
 /* Define a required propType for the icon prop. 
 */
 IconButton.propTypes = {
-    icon: PropTypes.node.isRequired
+    icon: PropTypes.node.isRequired,
+    variant: PropTypes.string
 }

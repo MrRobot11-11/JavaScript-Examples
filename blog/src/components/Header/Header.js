@@ -8,8 +8,13 @@ import { Section } from '../Section'
 import { Search } from 'styled-icons/feather'
 import { IconButton } from '../Button'
 
+/* Update the Outer component’s background style to use the 
+new theme structure. You could continue using the prop parameter 
+and just update the arrow function body to 
+props.theme.variants.header.primary.backgroundColor, 
+but I prefer destructuring the theme object */
 const Outer = styled.header`
-  background: ${props => props.theme.header.backgroundColor};
+  background: ${({ theme }) => theme.variants.header.primary.backgroundColor };
   margin-bottom: 1.45rem;
 `
 
@@ -46,7 +51,9 @@ const Header = ({ siteTitle }) => (
       </H1>
       </Section>
       <Section width={1/12}>
-        <IconButton icon={<Search />} />
+        <IconButton icon={<Search />} variant='contrast' /> {/* On the IconButton, 
+                                              set the variant prop 
+                                                to contrast */}
         </Section>
       </Section>
     </Inner>
