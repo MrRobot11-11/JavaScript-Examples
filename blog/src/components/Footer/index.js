@@ -1,1 +1,1 @@
-export { Footer } from './Footer.js' //comment
+export { Footer } from './Footer.js' //comment again
