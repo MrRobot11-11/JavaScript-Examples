@@ -1,12 +1,13 @@
 
+import * as React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
 import { Flex } from 'rebass'
 import styled, { ThemeConsumer } from 'styled-components'
 import { H1 } from '../Heading'
 import { SearchButton } from '../Button'
 import { Section } from '../Section'
+
 
 /* Update the Outer component’s background style to use the 
 new theme structure. You could continue using the prop parameter 
@@ -56,10 +57,10 @@ const Header = ({ siteTitle }) => (
   <Outer>
     <Inner>
       <Section flex>
-        <Section weidth={1/12}
+        <Section width={1/12}
         flex flexDirection="column" justifyContent="center">
         <ThemeConsumer>
-          {theme => <Image scr={theme.images.mainHeaderImage}/>}
+          {theme => <Image src={theme.images.mainHeaderImage}/>}
         </ThemeConsumer>
         </Section>
         <Section width={11/12}
@@ -69,11 +70,11 @@ const Header = ({ siteTitle }) => (
             <StyledLink to="/">{siteTitle}</StyledLink>
           </Title>
         <MediaQuery>
-          <StyledLink to="/">{siteTitle}</StyledLink>
+          <StyledLink to="/">Home</StyledLink>
           <StyledLink to="/about">About</StyledLink>
           <StyledLink to="/contact">Contact</StyledLink>
         </MediaQuery>
-        <SearchButton variant="contrast"/>
+        <SearchButton variant="contrast" />
       </Nav>
     </Section>
   </Section>
