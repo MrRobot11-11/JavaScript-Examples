@@ -39,12 +39,8 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title || `Title`} />
       <Content>
-        <Main>{children}</Main>
-        <Footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
+        <Main m={20}>{children}</Main>
+        <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
