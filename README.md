@@ -1,3 +1,3 @@
-# JavaScript Examples
+# Gatsby Blog
 
-A repository containing assignments for a javascript class taken in college
+GatsbyJS blog using JavaScript, Contentful, and 
