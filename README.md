@@ -1,3 +1,3 @@
 # Gatsby Blog
 
-GatsbyJS blog using JavaScript, Contentful, and GraphQl
+GatsbyJS blog using JavaScript, Contentful, and GraphQL
